@@ -7,12 +7,13 @@ repositories {
 }
 
 dependencies {
-    // JUnit 5
+    // JUnit 5 (Jupiter API + Engine)
     testImplementation 'org.junit.jupiter:junit-jupiter:5.11.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.11.0'
 }
 
 test {
-    useJUnitPlatform() // ensures JUnit 5 tests run
+    useJUnitPlatform() // tell Gradle to use JUnit 5
     testLogging {
         events "passed", "skipped", "failed"
     }
