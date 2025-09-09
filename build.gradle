@@ -7,13 +7,13 @@ repositories {
 }
 
 dependencies {
-    // JUnit Jupiter (API + Engine)
+    // JUnit 5 API + Engine
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.11.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.11.0'
 }
 
 test {
-    useJUnitPlatform() // Enables JUnit 5
+    useJUnitPlatform() // must be set for JUnit 5
     testLogging {
         events "passed", "skipped", "failed"
     }
